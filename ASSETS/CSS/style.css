@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    /*Font-family
+    É uma propriedade que determina qual será a fonte do elemento html. Pode-se colocar mais de uma fonte para caso não seja possível renderizar a fonte no navegador do usuário.
+    */
+    font-family: "Roboto", sans-serif;
+}
+
+/*1º Passo do menu responsivo
+Começa estilizando o HEader
+*/
+header{
+    background-color: #24252a;
+    box-shadow: 0px 3px 10px #464646;
+}
+
+/*2* Passo do menu responsivo
+Utilize a nav com display flex e justify content space between
+*/
+.nav-bar{
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem 6rem;
+}
+
+/*3º Passo
+Estilizar a logo para ter um display flex e estar alinhada ao centro
+*/
+.logo{
+    display: flex;
+    align-items: center;
+}
+.logo h1{
+    color: #fff;
+}
+
+/*4º Passo
+ display flex e align items center para evitar os itens ficarem desalinhados*/
+.nav-list{
+    display: flex;
+    align-items: center;
+}
+
+/*5º Passo
+Estilizar a ul com display flex e justify content center para evitar os itens ficarem desalinhados na horizontal*/
+.nav-list ul{
+    /*Display flex faz com que eles fiquem na horizontal*/
+    display: flex;
+    justify-content: center;
+    /* width: 1000px; 
+    justify-content: right;
+    Testando com largura */
+    list-style: none;
+
+}
+
+.nav-list ul .nav-item{
+    /*Px na margem não vai interferir na responsividade*/
+    margin: 0 15px;
+}
+
+.nav-link{
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.15rem;
+    font-weight: 400;
+}
+
+.login-button button{
+    background-color: #0187a7;
+    padding: 0.625rem 0.938rem;
+    border-radius: 0.313rem;
+    border: none;
+}
+
+.login-button button a{
+    text-decoration: none;
+    font-weight: 500;
+    color: #fff;
+    font-size: 1.1rem;
+}
+
+.mobile-menu-icon{
+    display: none;
+}
+
+.mobile-menu{
+    display: none;
+}
+
+.open{
+    display: block;
+}
+
+@media screen and (max-width: 730px){
+    .nav-bar{   
+        padding: 1rem 1.5rem;
+    }   
+    .nav-list{
+        display: none;
+    }
+    .login-button{
+        display: none;
+    }
+    .mobile-menu-icon {
+        display: block;
+    }
+    .mobile-menu-icon button{
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+    }
+
+    .mobile-menu ul{
+        display: flex;
+        text-align: center;
+        flex-direction: column;
+        padding-bottom: 1rem;
+    }
+
+    .mobile-menu .nav-item{
+        display: block;
+        padding-top: 1.2rem;
+    }
+
+    .mobile-menu .login-button{
+        display: block;
+        padding: 1rem 2rem;
+    }
+    .mobile-menu .login-button button{
+        width: 100%;
+    }
+}

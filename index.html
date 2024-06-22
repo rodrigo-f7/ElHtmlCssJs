@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu 02 Horizontal</title>
+
+    <!-- Rel na tag link é necessário para fornecer estilização -->
+    <link rel="stylesheet" href="ASSETS/CSS/style.css">
+</head>
+<body>
+    <header>
+        <nav class="nav-bar">
+            <div class="logo">
+                <h1>Logo</h1>
+            </div>
+            <div class="nav-list">
+                <ul>
+                    <li class="nav-item"><a href="#" class="nav-link">Início</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Projetos</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Sobre</a></li>
+                </ul>
+            </div>
+
+            <div class="login-button">
+                <button><a href="#">Entrar</a></button>
+            </div>
+
+            <div class="mobile-menu-icon">
+                <button onclick = "showMenu()">
+                    <img class="icon" 
+                    src="ASSETS/IMG/menu_white_36dp.svg"
+                    alt="">
+                </button>
+            </div>
+        </nav>
+
+        <div class="mobile-menu">
+            <ul>
+                <li class="nav-item"><a href="#" class="nav-link">Início</a></li>
+
+                <li class="nav-item"><a href="#" class="nav-link">Projetos</a></li>
+
+                <li class="nav-item"><a class="nav-link" href="#">Sobre</a></li>
+            </ul>
+
+            <div class="login-button">
+                <button><a href="#" class="">Entrar</a></button>
+            </div>
+        </div>
+    </header>
+
+    <footer>
+        <p>Criado por Larissa Kich, adaptado por Rodrigo Pereira</p>
+    </footer>
+
+    <script src="ASSETS/JS/script.js"></script>
+</body>
+</html>
